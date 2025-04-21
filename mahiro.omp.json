@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "#2D445F",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "\uF30a  ",
+          "type": "os"
+        },
+        {
+          "background": "#2D445F",
+          "foreground": "#ffffff",
+          "style": "diamond",
+          "template": "{{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#3D5A80",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#98C1D9",
+          "foreground": "#100e23",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "\uf115",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": "\ueb06",
+            "style": "agnoster"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#E0FBFC",
+          "foreground": "#193549",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " {{ .HEAD }} ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "filler": "·",
+      "segments": [
+        {
+          "background": "#98C1D9",
+          "foreground": "#100e23",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": " {{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }}{{ end }}  ",
+          "type": "status",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "background": "#3D5A80",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b2",
+          "properties": {
+            "time_format": "03:04:05 PM"
+          },
+          "trailing_diamond": "\ue0b4",
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
