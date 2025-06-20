@@ -1,6 +1,6 @@
 # Created by newuser for 5.9
 export PATH="$HOME/.local/bin:$PATH"
-eval "$(oh-my-posh init zsh --config ~/mahiro.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/mahiro.omp.json)"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
