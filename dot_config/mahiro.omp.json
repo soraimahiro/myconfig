@@ -10,8 +10,11 @@
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "\uF30a  ",
-          "type": "os"
+          "template": "{{.Icon}}  ",
+          "type": "os",
+	  "properties": {
+    		"macos": "\uF179"
+          }
         },
         {
           "background": "#2D445F",
@@ -58,11 +61,19 @@
       "filler": "·",
       "segments": [
         {
+          "background": "#E0FBFC",
+          "foreground": "#193549",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}\ue73c {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "type": "python"
+        },
+        {
           "background": "#98C1D9",
           "foreground": "#100e23",
           "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "template": " {{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }}{{ end }}  ",
+          "template": " {{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }}{{ end }} ",
           "type": "status",
           "properties": {
             "always_enabled": true
