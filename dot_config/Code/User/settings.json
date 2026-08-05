@@ -1,0 +1,32 @@
+{
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "workbench.colorTheme": "One Dark Pro Night Flat",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.confirmSync": false,
+    "editor.fontSize": 14,
+    "chat.editor.fontSize": 14,
+    "chat.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "security.workspace.trust.untrustedFiles": "open",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "background-position": "center center",
+            "background-size": "cover",
+            "opacity": 0.1
+        },
+        "styles": [],
+        "images": [
+            "~/Pictures/wallpaper/106850359_p0.png"
+        ],
+        "interval": 0,
+        "random": false
+    }
+}

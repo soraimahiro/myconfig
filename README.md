@@ -33,6 +33,7 @@ You can install all of them automatically by running the setup script after appl
     *   `plugins.zsh`: Bootstraps Zinit and loads plugins/snippets.
     *   `config.zsh`: Auto-completion styles (`zstyle`) and zsh options.
     *   `aliases.zsh`: Handy shortcuts and aliases (e.g. `makecpp`).
+*   **`.config/Code/User/settings.json`**: VS Code user settings (linked from `~/Library/Application Support/Code/User/` on macOS).
 *   **`.config/zellij/`**: Zellij multiplexer settings.
 *   **`.wezterm.lua`**: Wezterm terminal configuration.
 *   **`.tmux.conf`**: TMUX terminal multiplexer settings.
