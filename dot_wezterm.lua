@@ -1,16 +1,16 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
--- Custom One Dark Color Scheme
+-- Custom One Dark Pro Night Flat Color Scheme
 config.color_schemes = {
-  ['one-dark'] = {
-    foreground = '#e2e4e9', -- Bright White
-    background = '#282c34', -- Black background
+  ['One Dark Pro Night Flat'] = {
+    foreground = '#abb2bf',
+    background = '#16191d',
     cursor_bg = '#ffffff', -- Blue cursor
-    cursor_fg = '#282c34',
+    cursor_fg = '#16191d',
     cursor_border = '#ffffff',
-    selection_bg = '#3e4452', -- Selection color
-    selection_fg = '#e2e4e9',
+    selection_bg = '#323842',
+    selection_fg = '#d7dae0',
     ansi = {
       '#282c34', -- 0: black
       '#be5046', -- 1: red (Dark Red)
@@ -32,40 +32,40 @@ config.color_schemes = {
       '#ffffff', -- 15: bright white
     },
     tab_bar = {
-      background = '#282c34',
+      background = '#16191d',
       active_tab = {
-        bg_color = '#61afef',
-        fg_color = '#282c34',
+        bg_color = '#23272e',
+        fg_color = '#dcdcdc',
         intensity = 'Bold',
       },
       inactive_tab = {
-        bg_color = '#3e4452',
+        bg_color = '#16191d',
         fg_color = '#abb2bf',
       },
       inactive_tab_hover = {
-        bg_color = '#4b5263',
-        fg_color = '#abb2bf',
+        bg_color = '#323842',
+        fg_color = '#d7dae0',
       },
       new_tab = {
-        bg_color = '#282c34',
+        bg_color = '#16191d',
         fg_color = '#abb2bf',
       },
       new_tab_hover = {
-        bg_color = '#3e4452',
-        fg_color = '#abb2bf',
+        bg_color = '#323842',
+        fg_color = '#d7dae0',
       },
     }
   }
 }
 
-config.color_scheme = 'one-dark'
+config.color_scheme = 'One Dark Pro Night Flat'
 
 -- Background Image Configuration
 config.background = {
-  -- Layer 1: Solid Dark Color (prevent desktop transparency - using One Dark background)
+  -- Layer 1: Solid Dark Color (prevent desktop transparency - using One Dark Pro Night Flat background)
   {
     source = {
-      Color = '#282c34',
+      Color = '#16191d',
     },
     width = '100%',
     height = '100%',
@@ -118,8 +118,8 @@ config.hide_tab_bar_if_only_one_tab = false
 
 -- Customize fancy tab bar frame background to blend with terminal color
 config.window_frame = {
-  active_titlebar_bg = '#282c34',
-  inactive_titlebar_bg = '#282c34',
+  active_titlebar_bg = '#16191d',
+  inactive_titlebar_bg = '#16191d',
 }
 
 -- Zellij-like KeyTables & Modal Bindings
@@ -220,7 +220,7 @@ wezterm.on('update-right-status', function(window, pane)
   if name then
     name = 'MODE: ' .. string.upper(name)
     window:set_right_status(wezterm.format {
-      { Background = { Color = '#3D5A80' } },
+      { Background = { Color = '#4d78cc' } },
       { Foreground = { Color = '#ffffff' } },
       { Text = '  ' .. name .. '  ' },
     })
